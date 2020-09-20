@@ -2,6 +2,7 @@ package com.adverity.warehouse.search.query.dto
 
 import com.adverity.warehouse.search.query.Metric
 import javax.validation.constraints.Max
+import javax.validation.constraints.Min
 import javax.validation.constraints.NotEmpty
 import javax.validation.constraints.Positive
 
@@ -13,6 +14,6 @@ internal data class WarehouseQueryDTO(
         @field:Positive(message = "Page cannot be less than one")
         val page: Int,
         @field:Max(100, message = "Size cannot be greater than one hundred")
-        @field:Positive(message = "Size cannot be less than one")
+        @field:Min(1, message = "Size cannot be less than one")
         val size: Int
 )

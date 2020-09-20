@@ -32,8 +32,8 @@ And you should see something like:
 ````
    Name                Command             State            Ports          
 ---------------------------------------------------------------------------
-bookapp      java -jar /app.jar            Up      0.0.0.0:8080->8080/tcp  
-bookapp_db   docker-entrypoint.sh mongod   Up      0.0.0.0:27017->27017/tcp
+wareehouse      java -jar /app.jar            Up      0.0.0.0:8080->8080/tcp  
+warehouse-db   docker-entrypoint.sh mongod   Up      0.0.0.0:27017->27017/tcp
 ````
 
 ##### Postman #####

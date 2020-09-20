@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "6e37b9ed-19d8-4964-8ebf-d70c77a76781",
+		"name": "Warehouse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Import",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/arkadiusztutka/Downloads/PIxSyyrIKFORrCXfMYqZBI.csv"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://54.38.159.208:8080/api/warehouse/import",
+					"protocol": "http",
+					"host": [
+						"54",
+						"38",
+						"159",
+						"208"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"warehouse",
+						"import"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Import Status",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "5bd510ec-21ed-43c0-b894-d057d325680c",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://54.38.159.208:8080/api/warehouse/import/1/status",
+					"protocol": "http",
+					"host": [
+						"54",
+						"38",
+						"159",
+						"208"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"warehouse",
+						"import",
+						"1",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search full request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"metrics\":[\n      \"CLICKS\",\n      \"IMPRESSIONS\",\n      \"CLICK_THROUGH_RATE\",\n      \"SUM_CLICKS\",\n      \"SUM_IMPRESSIONS\",\n      \"AVERAGE_CLICKS\",\n      \"AVERAGE_IMPRESSIONS\"\n   ],\n   \"filters\":[\n      {\n         \"type\":\"DATASOURCE\",\n         \"condition\":{\n            \"name\":\"Google Ads\"\n         }\n      },\n      {\n         \"type\":\"CAMPAIGN\",\n         \"condition\":{\n            \"name\":\"Adventmarkt Touristik\"\n         }\n      },\n      {\n         \"type\":\"DATE\",\n         \"condition\":{\n            \"date\":\"2020-09-15\",\n            \"range\":{\n               \"from\":\"2019-01-01\",\n               \"to\":\"2020-01-01\"\n            },\n            \"year\":2020,\n            \"month\":9,\n            \"dayOfMonth\":15,\n            \"dayOfYear\":100,\n            \"weekOfYear\":33,\n            \"quarter\":3\n         }\n      }\n   ],\n   \"groupers\":[\n      {\n         \"type\":\"DATASOURCE\",\n         \"attribute\":\"NAME\"\n      },\n      {\n         \"type\":\"CAMPAIGN\",\n         \"attribute\":\"NAME\"\n      },\n      {\n         \"type\":\"DATE\",\n         \"attribute\":\"DATE\"\n      },\n      {\n         \"type\":\"DATE\",\n         \"attribute\":\"YEAR\"\n      },\n      {\n         \"type\":\"DATE\",\n         \"attribute\":\"MONTH\"\n      },\n      {\n         \"type\":\"DATE\",\n         \"attribute\":\"DAY_OF_MONTH\"\n      },\n      {\n         \"type\":\"DATE\",\n         \"attribute\":\"DAY_OF_YEAR\"\n      },\n      {\n         \"type\":\"DATE\",\n         \"attribute\":\"WEEK_OF_YEAR\"\n      },\n      {\n         \"type\":\"DATE\",\n         \"attribute\":\"QUARTER\"\n      }\n   ],\n   \"page\":1,\n   \"size\":10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.38.159.208:8080/api/warehouse/search",
+					"protocol": "http",
+					"host": [
+						"54",
+						"38",
+						"159",
+						"208"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"warehouse",
+						"search"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
