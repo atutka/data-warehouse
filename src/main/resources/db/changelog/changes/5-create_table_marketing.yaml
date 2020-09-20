@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: 5-create_table_marketing-1
+      author: arkadiusz.tutka
+      changes:
+        - sqlFile:
+            endDelimiter: \nGO
+            splitStatements: true
+            path: db/sql/5-create_table_marketing.sql
+            stripComments: true

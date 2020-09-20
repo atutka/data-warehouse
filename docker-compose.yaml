@@ -1,0 +1,26 @@
+version: "3"
+services:
+  warehouse:
+    build: .
+    ports:
+      - "8080:8080"
+    container_name: warehouse
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+    links:
+      - warehouse-db
+    depends_on:
+      - warehouse-db
+
+  warehouse-db:
+    image: postgres:11
+    container_name: warehouse-db
+    hostname: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data/postgresql-data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_DB=warehouse
+      - POSTGRES_USER=warehouse
+      - POSTGRES_PASSWORD=warehouse
