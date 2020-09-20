@@ -38,5 +38,10 @@ warehouse-db   docker-entrypoint.sh mongod   Up      0.0.0.0:27017->27017/tcp
 
 ##### Postman #####
 
-In directory `postman` is exported collection with example requests. 
+In directory `Postman` is exported collection with example requests. 
 You can import it to your Postman app.
+There are also some simple sample requests that can be used.
+
+##### Running instance #####
+
+Application is running on server with address http://54.38.159.208:8080. It has imported data from the file given in description.

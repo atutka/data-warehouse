@@ -1,0 +1,21 @@
+{
+   "metrics":[
+      "SUM_IMPRESSIONS"
+   ],
+   "filters":[
+      {
+         "type":"DATASOURCE",
+         "condition":{
+            "name":"Google Ads"
+         }
+      }
+   ],
+   "groupers":[
+      {
+         "type":"DATASOURCE",
+         "attribute":"NAME"
+      }
+   ],
+   "page":1,
+   "size":10
+}

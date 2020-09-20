@@ -1,0 +1,22 @@
+{
+   "metrics":[
+      "CLICK_THROUGH_RATE",
+      "AVERAGE_CLICKS"
+   ],
+   "filters":[
+      {
+         "type":"DATASOURCE",
+         "condition":{
+            "name":"Google Ads"
+         }
+      },
+      {
+         "type":"CAMPAIGN",
+         "condition":{
+            "name":"Adventmarkt Touristik"
+         }
+      }
+   ],
+   "page":1,
+   "size":10
+}
